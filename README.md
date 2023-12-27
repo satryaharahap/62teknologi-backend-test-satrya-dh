@@ -6,7 +6,7 @@ Endpoint : POST /business
 
 Request Header :
 
-- api-key : Token (Mandatory)
+- api-key : 59d9ae4cb202f3bec60a977c6dd704862c221f82
 
 Request Body :
 
