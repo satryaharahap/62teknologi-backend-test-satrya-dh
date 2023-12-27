@@ -1,0 +1,533 @@
+{
+	"info": {
+		"_postman_id": "75de7fff-91a2-4a45-8b27-eeb19ae6bae5",
+		"name": "Enam Dua Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31508342"
+	},
+	"item": [
+		{
+			"name": "Business Search Term",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "59d9ae4cb202f3bec60a977c6dd704862c221f82",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9191/business/search?term=sat",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"business",
+						"search"
+					],
+					"query": [
+						{
+							"key": "term",
+							"value": "sat"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Business Search All",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "59d9ae4cb202f3bec60a977c6dd704862c221f82",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"alias\":\"sat\",\r\n\"name\":\"Satrya h\",\r\n\"image_url\":\"fjkajfa\",\r\n\"url\":\"hfhskafa\",\r\n\"review_count\":2535,\r\n\"rating\":5.0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9191/business/search",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"business",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Business Search Term & pagging",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "59d9ae4cb202f3bec60a977c6dd704862c221f82",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"alias\":\"sat\",\r\n\"name\":\"Satrya h\",\r\n\"image_url\":\"fjkajfa\",\r\n\"url\":\"hfhskafa\",\r\n\"review_count\":2535,\r\n\"rating\":5.0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9191/business/search?term=Rubirosa&distance=2000&sort_by=distance&page=0&size=20",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"business",
+						"search"
+					],
+					"query": [
+						{
+							"key": "term",
+							"value": "Rubirosa"
+						},
+						{
+							"key": "distance",
+							"value": "2000"
+						},
+						{
+							"key": "sort_by",
+							"value": "distance",
+							"description": "rating, review_count, distance"
+						},
+						{
+							"key": "page",
+							"value": "0",
+							"description": "offset"
+						},
+						{
+							"key": "size",
+							"value": "20",
+							"description": "limit"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BusinessDetail",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "59d9ae4cb202f3bec60a977c6dd704862c221f82",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"alias\":\"sat\",\r\n\"name\":\"Satrya h\",\r\n\"image_url\":\"fjkajfa\",\r\n\"url\":\"hfhskafa\",\r\n\"review_count\":2535,\r\n\"rating\":5.0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9191/business/9",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"business",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BusinessReviews",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "59d9ae4cb202f3bec60a977c6dd704862c221f82",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9191/business/4/reviews",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"business",
+						"4",
+						"reviews"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Business",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "59d9ae4cb202f3bec60a977c6dd704862c221f82",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n            \"alias\": \"gramercy-tavern-new-york\",\r\n            \"name\": \"Gramercy Tavern\",\r\n            \"image_url\": \"https://s3-media2.fl.yelpcdn.com/bphoto/l2oSnhyvJfWT6bufumBMzw/o.jpg\",\r\n            \"is_closed\": false,\r\n            \"url\": \"https://www.yelp.com/biz/gramercy-tavern-new-york?adjust_creative=DSj6I8qbyHf-Zm2fGExuug&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=DSj6I8qbyHf-Zm2fGExuug\",\r\n            \"review_count\": 3425,\r\n            \"rating\": 4.5,\r\n            \"price\": \"$$$$\",\r\n            \"phone\": \"+12124770777\",\r\n            \"display_phone\": \"(212) 477-0777\",\r\n            \"distance\": 3695.6399277648\r\n            }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9191/business/",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"business",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddLocation",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "59d9ae4cb202f3bec60a977c6dd704862c221f82",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"address1\": \"42 E 20th St\",\r\n                \"address2\": \"\",\r\n                \"address3\": \"\",\r\n                \"city\": \"New York\",\r\n                \"zip_code\": \"10003\",\r\n                \"country\": \"US\",\r\n                \"state\": \"NY\"\r\n            }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9191/business/10/location",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"business",
+						"10",
+						"location"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddCategories",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "59d9ae4cb202f3bec60a977c6dd704862c221f82",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"alias\": \"newamerican\",\r\n    \"title\": \"New American\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9191/business/10/categories",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"business",
+						"10",
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddCoordinates",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "59d9ae4cb202f3bec60a977c6dd704862c221f82",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"latitude\": 40.73844,\r\n    \"longitude\": -73.98825\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9191/business/10/coordinates",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"business",
+						"10",
+						"coordinates"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddPhotos",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "59d9ae4cb202f3bec60a977c6dd704862c221f82",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"photos\": \"https://s3-media1.fl.yelpcdn.com/bphoto/o7Lmy_fX07ZWhEn_m5R2CQ/o.jpg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9191/business/9/photos",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"business",
+						"9",
+						"photos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddTransactions",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "59d9ae4cb202f3bec60a977c6dd704862c221f82",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"transaction\": \"pickup\"//delivery\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9191/business/9/transactions",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"business",
+						"9",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddReviews",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "59d9ae4cb202f3bec60a977c6dd704862c221f82",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"url\": \"https://www.yelp.com/biz/jessies-nutty-cups-new-york-4?adjust_creative=DSj6I8qbyHf-Zm2fGExuug&hrid=d3ulSqLFFDy9n5cB6cnqoQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_reviews&utm_source=DSj6I8qbyHf-Zm2fGExuug\",\r\n    \"text\": \"A coworker had brought these to our clinic in San Francisco & they were amazing!! I found them on instagram & it appears they have closed their business.\",\r\n    \"rating\": 5,\r\n    \"time_created\": \"2023-10-30 23:21:55\",\r\n    \"user_id\": \"qziedid5UCRy4WUeKUc_jg\",\r\n    \"profile_url\": \"https://www.yelp.com/user_details?userid=qziedid5UCRy4WUeKUc_jg\",\r\n    \"image_url\": \"https://s3-media2.fl.yelpcdn.com/photo/pb9v5YZo4iOzki5KjxhvlA/o.jpg\",\r\n    \"name\": \"Cindy G.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9191/business/4/reviews",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"business",
+						"4",
+						"reviews"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BusinessUpdate",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "59d9ae4cb202f3bec60a977c6dd704862c221f82",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"alias\": \"gramercy-tavern-new-york\",\r\n    \"name\": \"Gramercy Taverns\",\r\n    \"image_url\": \"https://s3-media2.fl.yelpcdn.com/bphoto/l2oSnhyvJfWT6bufumBMzw/o.jpg\",\r\n    \"is_closed\": false,\r\n    \"url\": \"https://www.yelp.com/biz/gramercy-tavern-new-york?adjust_creative=DSj6I8qbyHf-Zm2fGExuug&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=DSj6I8qbyHf-Zm2fGExuug\",\r\n    \"review_count\": 3425,\r\n    \"rating\": 4.5,\r\n    \"price\": \"$$$$\",\r\n    \"phone\": \"+12124770777\",\r\n    \"display_phone\": \"(212) 477-0777\",\r\n    \"distance\": 3695.6399277648\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9191/business/10",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"business",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BusinessDelete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "59d9ae4cb202f3bec60a977c6dd704862c221f82",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:9191/business/9",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"business",
+						"9"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
